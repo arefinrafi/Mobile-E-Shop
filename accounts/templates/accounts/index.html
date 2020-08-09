@@ -1,0 +1,17 @@
+{% extends 'main_template.html' %}
+{% load static %}
+
+{% block content %}
+	{% for mobile in mobiles %}
+	<div class="col-4 my-2 mx-auto">
+		<figure>
+			<img src="{{ mobile.image.url }}" alt="gallery" class="img-fluid">
+		</figure>
+		<div class="font-style">
+			<p>{{ mobile.model }}</p>
+			<p><strong>{{ mobile.price }} tk</strong></p>
+		</div>
+	</div>
+	{% endfor %}
+
+{% endblock %}

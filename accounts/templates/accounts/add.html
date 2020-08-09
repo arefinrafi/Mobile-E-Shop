@@ -1,0 +1,42 @@
+{% extends 'main_template.html' %}
+{% load static %}
+
+{% block content %}
+<form method="POST" action="" enctype="multipart/form-data">
+    {%csrf_token %}
+   <div class="mb-3">
+        <select class="form-select" aria-label="Default select example" name="b_type" id="id_b_type" required>
+          <option value="" selected="">Select</option>
+          <option value="1">Apple</option>
+          <option value="2">Xiaomi</option>
+          <option value="3">Samsung</option>
+          <option value="4">Huawei</option>
+          <option value="5">Nokia</option>
+          <option value="7">Vivo</option>
+          <option value="8">RealMe</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="model" class="form-label">Model: </label>
+        <input type="text" class="form-control"  name="model" id="model" placeholder="Enter model name...."{{form.model}}
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price: </label>
+        <input type="text" class="form-control" name="price" id="price" placeholder="Enter Price...."{{form.price}}
+    </div>
+
+    <label for="image" class="form-label">Image: </label>
+    <div class="form-file">
+      <input type="file" class="form-file-input" id="id_image" name="image" accept="image/*" required>
+      <label class="form-file-label" for="customFile">
+        <span class="form-file-text">Choose file...</span>
+        <span class="form-file-button">Browse</span>
+      </label>
+    </div>
+    <div class="btn-design">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>
+
+
+{% endblock %}

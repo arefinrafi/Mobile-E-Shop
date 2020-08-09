@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Mobile E-Shop</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Mobile E-Shop</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="news.html">News</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+	            Brand
+	          </a>
+	          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+	            <li><a class="dropdown-item" href="#">Action</a></li>
+	            <li><a class="dropdown-item" href="#">Another action</a></li>
+	            <li><hr class="dropdown-divider"></li>
+	            <li><a class="dropdown-item" href="#">Something else here</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="{% url 'add' %}">Add</a>
+	        </li>
+	        <!-- <li class="nav-item">
+	          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+	        </li> -->
+	      </ul>
+	      <form class="d-flex">
+	        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+	        <button class="btn btn-outline-success" type="submit">Search</button>
+	      </form>
+	    </div>
+	  </div>
+	</nav>
+
+	<section class="main_heading pt-2">
+		<div class="container">
+			<div class="row my-5">
+				{% block content %}
+
+        		{% endblock %}
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/iphone11.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>iPhone 11</p>-->
+<!--						<p><strong>93999 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/iphone_11_pro.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Apple iPhone 11 Pro Max 4GB/64GB</p>-->
+<!--						<p><strong>139999 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/iphone_x.png' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>iPhone X 64GB</p>-->
+<!--						<p><strong>84499 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/Xiaomi_Redmi_Note_9.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Xiaomi Redmi Note 9</p>-->
+<!--						<p><strong>19999 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/vivo_y50.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Vivo Y50</p>-->
+<!--						<p><strong>22990  tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/vivo_v19.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Vivo V19</p>-->
+<!--						<p><strong>35990 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/realme6.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Realme 6 8GB/128GB</p>-->
+<!--						<p><strong>22990 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/realme2pro.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Realme 2 Pro</p>-->
+<!--						<p><strong>29990 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/huaweip30pro.png' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Huawei P30 Pro</p>-->
+<!--						<p><strong>89999 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/samsunggalaxyA51.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Samsung Galaxy A51</p>-->
+<!--						<p><strong>29999 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-4 my-2 mx-auto">-->
+<!--					<figure>-->
+<!--						<img src="{% static '/images/OPPOreno3pro.jpg' %}" alt="gallery" class="img-fluid">-->
+<!--					</figure>-->
+<!--					<div class="font-style">-->
+<!--						<p>Oppo Reno 3 Pro</p>-->
+<!--						<p><strong>39990 tk</strong></p>-->
+<!--					</div>-->
+<!--				</div>-->
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container text-center">
+			<p><strong>All right reserved by &copy; Mobile E-Shop</strong></p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
